@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Sort By Likes</title>
+    <style>
+        body {
+            text-align: center;
+            background-color: rgb(255, 245, 245);
+            width: 250px;
+        }
+
+        #icon {
+            width: 75px;
+            margin: 5px;
+        }
+
+        #footer {
+            font-size: 10px;
+            color: gray;
+        }
+
+        #footer a {
+            color: gray;
+            text-decoration: none;
+        }
+
+        #footer a:hover {
+            text-decoration: underline;
+        }
+
+        #tooltipMessage {
+            font-size: 16px;
+            color: rgb(84, 0, 0);
+        }
+
+        .hidden {
+            display: none;
+        }
+
+        /* Styles below taken and adopted from CSS Scan */
+
+        .button-enabled {
+            background-color: #c2fbd7;
+            border-radius: 16px;
+            box-shadow: rgba(44, 187, 99, .2) 0 -25px 18px -14px inset, rgba(44, 187, 99, .15) 0 1px 2px, rgba(44, 187, 99, .15) 0 2px 4px, rgba(44, 187, 99, .15) 0 4px 8px, rgba(44, 187, 99, .15) 0 8px 16px, rgba(44, 187, 99, .15) 0 16px 32px;
+            color: green;
+            cursor: pointer;
+            display: inline-block;
+            font-family: CerebriSans-Regular, -apple-system, system-ui, Roboto, sans-serif;
+            padding: 7px 20px;
+            text-align: center;
+            text-decoration: none;
+            transition: all 250ms;
+            border: 0;
+            font-size: 16px;
+            user-select: none;
+            -webkit-user-select: none;
+            touch-action: manipulation;
+        }
+
+        .button-enabled:hover {
+            box-shadow: rgba(44, 187, 99, .35) 0 -25px 18px -14px inset, rgba(44, 187, 99, .25) 0 1px 2px, rgba(44, 187, 99, .25) 0 2px 4px, rgba(44, 187, 99, .25) 0 4px 8px, rgba(44, 187, 99, .25) 0 8px 16px, rgba(44, 187, 99, .25) 0 16px 32px;
+            transform: scale(1.01);
+        }
+
+        .button-disabled {
+            background-color: #f8d7da;
+            border-radius: 16px;
+            box-shadow: rgba(220, 53, 69, .2) 0 -25px 18px -14px inset, rgba(220, 53, 69, .15) 0 1px 2px, rgba(220, 53, 69, .15) 0 2px 4px, rgba(220, 53, 69, .15) 0 4px 8px, rgba(220, 53, 69, .15) 0 8px 16px, rgba(220, 53, 69, .15) 0 16px 32px;
+            color: rgb(112, 71, 71);
+            cursor: pointer;
+            display: inline-block;
+            font-family: CerebriSans-Regular, -apple-system, system-ui, Roboto, sans-serif;
+            padding: 7px 20px;
+            text-align: center;
+            text-decoration: none;
+            transition: all 250ms;
+            border: 0;
+            font-size: 16px;
+            user-select: none;
+            -webkit-user-select: none;
+        }
+
+        .button-disabled:hover {
+            box-shadow: rgba(220, 53, 69, .35) 0 -25px 18px -14px inset, rgba(220, 53, 69, .25) 0 1px 2px, rgba(220, 53, 69, .25) 0 2px 4px, rgba(220, 53, 69, .25) 0 4px 8px, rgba(220, 53, 69, .25) 0 8px 16px, rgba(220, 53, 69, .25) 0 16px 32px;
+            transform: scale(1.01);
+        }
+    </style>
+</head>
+
+<body>
+    <h1>#SortByLikes</h1>
+    <img src="../img/csbl_1024.png" id="icon" />
+    <br><br>
+    <div id="invalidSection" class="hidden">
+        <h3>Canvas course not detected.</h3>
+        <br>
+    </div>
+    <div id="courseSection" class="hidden">
+        <p id="courseName"><strong>[Course Name]</strong></p>
+        <button class="button-disabled" id="toggleCourse">Disabled for this course</button>
+        <br><br>
+    </div>
+    <div id="discussionSection" class="hidden">
+        <p id="discussionName"><strong>[Discussion Name]</strong></p>
+        <button class="button-enabled" id="cancelAlarm">Enabled for this discussion</button>
+        <br><br>
+    </div>
+    <div id="tooltipSection" class="hidden">
+        <p id="tooltipMessage"></p>
+    </div>
+    <p id="footer">v1.0.0 - <a href="https://chromewebstore.google.com/" target="_blank">Check for Updates</a> - <a href="https://github.com/shrayus-masanam/sort-by-likes" target="_blank">GitHub</a></p>
+    
+    <script src="../scripts/globals.js"></script>
+    <script src="../scripts/dataUtils.js"></script>
+    <script src="../scripts/popup.js"></script>
+</body>
+
+</html>
