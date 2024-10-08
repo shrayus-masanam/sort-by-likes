@@ -1,6 +1,6 @@
 {
 	"name": "Canvas #SortByLikes",
-	"version": "1.0.0",
+	"version": "1.0.1",
 	"description": "An unofficial re-implementation of Canvas's \"sort by likes\" feature in discussion posts.",
 	"permissions": [
 		"webNavigation",
