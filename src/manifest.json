@@ -5,12 +5,10 @@
 	"permissions": [
 		"webNavigation",
 		"scripting",
-		"storage",
-		"activeTab"
+		"storage"
 	],
 	"host_permissions": [
-		"*://*.instructure.com/*",
-		"*://canvas.vt.edu/*"
+		"<all_urls>"
 	],
 	"background": {
 		"service_worker": "scripts/background.js"
