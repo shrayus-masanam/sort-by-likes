@@ -7,3 +7,6 @@ thumbs.db
 .TemporaryItems
 .Trashes
 .VolumeIcon.icns
+
+# Webstore uploads
+bin/*.zip
